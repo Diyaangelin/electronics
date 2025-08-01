@@ -1,0 +1,388 @@
+/* ElectroShop.css */
+
+/* Import Bootstrap (make sure to install it: npm install bootstrap) */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Custom styles for ElectroShop */
+.electroshop {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #8B4513, #D2691E);
+  color: white;
+  padding: 100px 0;
+  text-align: center;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-section .lead {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Navigation */
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.nav-link.btn.btn-link {
+  color: rgba(255,255,255,.55) !important;
+  text-decoration: none;
+  border: none;
+  background: none;
+  padding: 0.5rem 1rem;
+  transition: color 0.15s ease-in-out;
+}
+
+.nav-link.btn.btn-link:hover,
+.nav-link.btn.btn-link:focus {
+  color: rgba(255,255,255,.75) !important;
+}
+
+.nav-link.btn.btn-link.active {
+  color: #fff !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255,255,255,.1);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255,255,255,.25);
+}
+
+/* Product Cards */
+.product-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important;
+}
+
+.product-card .card-img-top {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.product-card .card-body {
+  padding: 1.5rem;
+}
+
+.product-card .card-title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.product-card .card-text.text-muted {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.product-card .card-text.text-primary {
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.product-card .btn-outline-primary {
+  border-width: 2px;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.product-card .btn-outline-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(13,110,253,0.3);
+}
+
+/* Sections */
+.py-5 {
+  padding: 4rem 0 !important;
+}
+
+section h2 {
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+}
+
+section h2.text-center::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #007bff, #6610f2);
+  margin: 1rem auto;
+  border-radius: 2px;
+}
+
+/* About Section */
+#about .img-fluid {
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+#about h2 {
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+#about .lead {
+  font-size: 1.2rem;
+  color: #6c757d;
+  font-weight: 400;
+}
+
+#about p {
+  color: #6c757d;
+  line-height: 1.8;
+}
+
+/* Testimonials */
+#testimonials {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blockquote {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #495057;
+  margin-bottom: 2rem;
+}
+
+.blockquote p {
+  position: relative;
+  padding: 0 2rem;
+}
+
+.blockquote p::before {
+  content: '"';
+  font-size: 4rem;
+  color: #007bff;
+  position: absolute;
+  left: -10px;
+  top: -20px;
+  font-family: serif;
+}
+
+.blockquote p::after {
+  content: '"';
+  font-size: 4rem;
+  color: #007bff;
+  position: absolute;
+  right: -10px;
+  bottom: -40px;
+  font-family: serif;
+}
+
+.blockquote-footer {
+  font-size: 1.1rem;
+  color: #6c757d;
+}
+
+.carousel-controls .btn {
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+}
+
+/* Contact Section */
+#contact {
+  background: #fff;
+}
+
+#contact .form-control {
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+#contact .form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  transform: translateY(-2px);
+}
+
+#contact .form-label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.5rem;
+}
+
+#contact .btn-primary {
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+#contact .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, #343a40 0%, #212529 100%) !important;
+}
+
+footer p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.social-icons a:hover {
+  transform: translateY(-3px);
+  color: #007bff !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-section .lead {
+    font-size: 1.2rem;
+  }
+  
+  .hero-section {
+    padding: 60px 0;
+  }
+  
+  .py-5 {
+    padding: 3rem 0 !important;
+  }
+  
+  .blockquote {
+    font-size: 1.1rem;
+  }
+  
+  .blockquote p::before,
+  .blockquote p::after {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-section .lead {
+    font-size: 1rem;
+  }
+  
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+  
+  .product-card .card-body {
+    padding: 1rem;
+  }
+  
+  section h2 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading states and animations */
+.product-card .card-img-top {
+  background-color: #f8f9fa;
+}
+
+/* Badge styling */
+.badge {
+  font-size: 0.75rem;
+  padding: 0.35em 0.65em;
+}
+
+/* Button enhancements */
+.btn {
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-lg {
+  padding: 0.75rem 2rem;
+  font-size: 1.125rem;
+  border-radius: 0.5rem;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  border: none;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #218838 0%, #1ea085 100%);
+  box-shadow: 0 5px 15px rgba(40,167,69,0.3);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #007bff;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0056b3;
+}
